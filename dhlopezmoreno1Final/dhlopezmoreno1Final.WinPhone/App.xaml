@@ -1,0 +1,7 @@
+﻿<Application
+    x:Class="dhlopezmoreno1Final.WinPhone.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:dhlopezmoreno1Final.WinPhone">
+
+</Application>

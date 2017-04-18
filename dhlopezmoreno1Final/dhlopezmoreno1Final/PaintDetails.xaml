@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="dhlopezmoreno1Final.PaintDetails">
+  <ContentPage.Padding>
+  <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="0, 0, 0, 0"
+            WinPhone="0, 0, 0, 0"/>
+  </ContentPage.Padding>
+
+  <ContentPage.Content>
+    <ScrollView x:Name="PaintingScrollView" Orientation="Vertical" VerticalOptions="FillAndExpand" >
+      <StackLayout Orientation="Vertical"  VerticalOptions="Start" HorizontalOptions="FillAndExpand" >
+        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#FFF" Margin="20,5,20,5" Padding="15,10,15,10">
+          <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+            <Label Text="Name" WidthRequest="80"  VerticalOptions="Center" />
+            <Entry x:Name="txtFirstName" Text="{Binding Name}" Style="{StaticResource editEntry}" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+            <Label Text="Dated" WidthRequest="80"  VerticalOptions="Center" />
+            <Entry x:Name="txtDated" Text="{Binding Dated}" Style="{StaticResource editEntry}" />
+          </StackLayout>
+          <!--<StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+            <Label Text="txtDated" WidthRequest="80"  VerticalOptions="Center" />
+            <DatePicker x:Name="pickerDated" VerticalOptions="CenterAndExpand" Date="{Binding Dated}">
+              <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+              <DatePicker.MinimumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                  <x:Arguments>
+                    <x:String>Jan 1 1900</x:String>
+                  </x:Arguments>
+                </sys:DateTime>
+              </DatePicker.MinimumDate>
+              <DatePicker.MaximumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                  <x:Arguments>
+                    <x:String>Dec 31 2099</x:String>
+                  </x:Arguments>
+                </sys:DateTime>
+              </DatePicker.MaximumDate>
+            </DatePicker>
+          </StackLayout>
+          -->
+          <!--
+          <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+            <Label Text="Middle Name" WidthRequest="80"  VerticalOptions="Center" />
+            <Entry x:Name="txtMiddleName" Text="{Binding MiddleName}" Style="{StaticResource editEntry}" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+            <Label Text="Last Name" WidthRequest="80"  VerticalOptions="Center" />
+            <Entry x:Name="txtLastName" Text="{Binding LastName}" Style="{StaticResource editEntry}" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+            <Label Text="OHIP Number" WidthRequest="80"  VerticalOptions="Center" />
+            <Entry x:Name="txtOHIP" Text="{Binding OHIP}" Style="{StaticResource editEntry}" />
+          </StackLayout>
+          -->
+          <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+            <Label Text="Movement" WidthRequest="80"  VerticalOptions="Center" />
+            <Picker x:Name="ddlMovement" Style="{StaticResource editEntry}" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+            <Label Text="Artist" WidthRequest="80"  VerticalOptions="Center" />
+            <Picker x:Name="ddlArtist" Style="{StaticResource editEntry}" />
+          </StackLayout>
+
+          <Button Text="Save" Clicked="SaveClicked" Style="{StaticResource PatientListButton}" />
+          <Button Text="Cancel" Clicked="CancelClicked" Style="{StaticResource PatientListButton}" />
+          <Button x:Name="btnDelete" Text="Delete" Clicked="DeleteClicked" Style="{StaticResource PatientListButton}" />
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+
+</ContentPage>

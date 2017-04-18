@@ -1,0 +1,60 @@
+﻿@model Test3_ArtHistory.Models.Painting
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2></h2>
+
+<div>
+    <h4>Painting Details</h4>
+    <div>
+        @{
+            if (Model.imageContent != null && Model.imageMimeType.Contains("image"))
+            {
+                string imageBase64 = Convert.ToBase64String(Model.imageContent);
+                string imageSrc = string.Format("data:" + Model.imageMimeType + ";base64,{0}", imageBase64);
+                <img src="@imageSrc" style="max-height: 500px" class="img-responsive" /> @*img-rounded" />*@
+            }
+        }
+    </div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Artist.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Movement.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Movement.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dated)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

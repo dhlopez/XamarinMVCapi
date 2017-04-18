@@ -1,0 +1,2 @@
+C:\Users\Casa\Desktop\Practice\Xamarin\dhlopezmoreno1Final\dhlopezmoreno1Final\dhlopezmoreno1Final.UWP\dhlopezmoreno1Final.UWP.csproj;x86
+C:\Users\Casa\Desktop\Practice\Xamarin\dhlopezmoreno1Final\dhlopezmoreno1Final\dhlopezmoreno1Final\dhlopezmoreno1Final.csproj;neutral
